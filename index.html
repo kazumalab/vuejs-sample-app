@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Vue.js sample app</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <div id="sample">
+      <h1>Hello {{ name }}</h1>
+      <p>{{ message }}</p>
+      <input v-model="name">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#sample",
+        data: {
+          message: "CurrentTime: " + new Date().toLocaleString(),
+          name: "Noname"
+        }
+      })
+    </script>
+  </body>
+</html>
